@@ -1,0 +1,13 @@
+import { request } from '@utils/request';
+
+<% for (var i=0; i < infos.length; i++) {%>
+  <% info=infos[i] %>
+
+/**
+  * <%=info.summary%><% Array.isArray(info.parameters) && info.parameters.forEach(parameter => {%>
+  * @param {<%-parameter.type %>} <%=parameter.name %> - <%=parameter.description _%>
+    <%})%>
+  */
+      
+export const <%=info.name%> = (params) => request.<%=info.method%>('<%=info.fullPath%>', params);
+<%}%>
