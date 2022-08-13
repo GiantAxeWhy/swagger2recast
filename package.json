@@ -27,7 +27,7 @@
       "prettier -c"
     ]
   },
-  "author": "yangli01",
+  "author": "wanghy",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.2",
